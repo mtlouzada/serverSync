@@ -1,0 +1,84 @@
+@import './variables';
+@import './mixins';
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: $text-color;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+
+  h1 {
+    color: $primary-color;
+    margin: 0;
+  }
+
+  p {
+    color: $text-color;
+    font-size: 1rem;
+  }
+}
+
+.task-form {
+  margin-bottom: 20px;
+  width: 100%;
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.task-list {
+  width: 100%;
+
+  .task-card {
+    background-color: $secondary-color;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+
+    h3 {
+      margin: 0 0 5px;
+    }
+
+    p {
+      margin: 0;
+      color: #666;
+    }
+  }
+}
